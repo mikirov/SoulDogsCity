@@ -19,9 +19,7 @@ function App() {
         {/*<Wallet/>*/}
         <Unity
             unityContext={unityContext}
-            matchWebGLToCanvasSize={false}
             style={{ width: "100%", height: "100%" }}
-            devicePixelRatio={1920/1080}
         />
     </>
     );
