@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Unity, {UnityContext} from "react-unity-webgl";
 import Wallet from "./components/Wallet/Wallet";
+import GameContainer from './components/container/GameContainer';
+import SideBar from './components/sidebar/SideBar';
 
 const unityContext = new UnityContext({
     loaderUrl: "Build/Build.loader.js",
@@ -16,11 +18,15 @@ const unityContext = new UnityContext({
 function App() {
     return (
     <>
-        {/*<Wallet/>*/}
-        <Unity
-            unityContext={unityContext}
-            style={{ width: "100%", height: "100%" }}
+        <GameContainer game={
+            <Unity
+                unityContext={unityContext}
+                style={{ width: "100vw", height: "100vh" }}
+            /> 
+        }
+            sidebar={<SideBar />}
         />
+        {/* <Wallet/> */}
     </>
     );
 
