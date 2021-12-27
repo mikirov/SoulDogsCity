@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 import Unity, {UnityContext} from "react-unity-webgl";
-import Wallet from "./components/Wallet/Wallet";
 import GameContainer from './components/container/GameContainer';
-import SideBar from './components/sidebar/SideBar';
+import SDWalletProvider from './providers/wallet_provider';
+import { WalletConnectButton } from '@solana/wallet-adapter-react-ui';
+import SDWalletConnectButton from './components/Wallet/WalletConnectButton';
 
 const unityContext = new UnityContext({
     loaderUrl: "Build/Build.loader.js",
@@ -18,15 +19,14 @@ const unityContext = new UnityContext({
 function App() {
     return (
     <>
-        <GameContainer game={
-            <Unity
-                unityContext={unityContext}
-                style={{ width: "100vw", height: "100vh" }}
-            /> 
-        }
-            sidebar={<SideBar />}
-        />
-        {/* <Wallet/> */}
+        <SDWalletProvider>
+            <GameContainer 
+                    game={<Unity
+                        unityContext={unityContext}
+                        style={{ width: "100vw", height: "100vh" }} />}
+                    sidebar={<div></div>} 
+                    actions={<SDWalletConnectButton></SDWalletConnectButton>}        />
+        </SDWalletProvider>
     </>
     );
 
