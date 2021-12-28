@@ -3,7 +3,7 @@ import { FunctionComponent, ReactNode } from "react";
 interface GameContainerProps {
     game: ReactNode;
     sidebar: ReactNode;
-    actions: ReactNode;
+    navbar: ReactNode;
 }
 
 // 200px 70% 700%
@@ -12,10 +12,8 @@ const GameContainer: FunctionComponent<GameContainerProps> = (props) => {
         <div style={{position: 'relative'}}>
             <div style={{position: 'absolute'}}>
                 <div style={{position: 'relative'}}>
-                    <div style={{position: 'absolute', top: 10, left: -10, width: '100vw', height: 50, zIndex: 1}}>
-                        <div style={{display: 'flex', flexDirection: 'row-reverse'}}>
-                            <>{props.actions}</>
-                        </div>
+                    <div style={{position: 'absolute', top: 10, left: -10, width: '100vw', zIndex: 1}}>
+                        {props.navbar}
                     </div>
                     <div style={{position: 'absolute', zIndex: 0}}>
                         {props.game}
