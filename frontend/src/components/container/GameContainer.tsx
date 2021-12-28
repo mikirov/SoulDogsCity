@@ -12,7 +12,7 @@ const GameContainer: FunctionComponent<GameContainerProps> = (props) => {
         <div style={{position: 'relative'}}>
             <div style={{position: 'absolute'}}>
                 <div style={{position: 'relative'}}>
-                    <div style={{position: 'absolute', top: 10, left: -10, width: '100%', height: 50, zIndex: 1}}>
+                    <div style={{position: 'absolute', top: 10, left: -10, width: '100vw', height: 50, zIndex: 1}}>
                         <div style={{display: 'flex', flexDirection: 'row-reverse'}}>
                             <>{props.actions}</>
                         </div>

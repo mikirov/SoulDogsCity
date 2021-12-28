@@ -4,7 +4,7 @@ import { FC } from 'react';
 // Default styles that can be overridden by your app
 require('@solana/wallet-adapter-react-ui/styles.css');
 
-const SDWalletConnectButton: FC = () => {
+const SDWalletConnectButtonView: FC = () => {
     // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
 
     return (
@@ -12,4 +12,4 @@ const SDWalletConnectButton: FC = () => {
     );
 };
 
-export default SDWalletConnectButton;
+export default SDWalletConnectButtonView;

@@ -4,7 +4,7 @@ import Unity, {UnityContext} from "react-unity-webgl";
 import GameContainer from './components/container/GameContainer';
 import SDWalletProvider from './providers/wallet_provider';
 import { WalletConnectButton } from '@solana/wallet-adapter-react-ui';
-import SDWalletConnectButton from './components/Wallet/WalletConnectButton';
+import SDWalletConnectButtonView from './components/Wallet/WalletConnectButton';
 
 const unityContext = new UnityContext({
     loaderUrl: "Build/Build.loader.js",
@@ -25,7 +25,7 @@ function App() {
                         unityContext={unityContext}
                         style={{ width: "100vw", height: "100vh" }} />}
                     sidebar={<div></div>} 
-                    actions={<SDWalletConnectButton></SDWalletConnectButton>}        />
+                    actions={<SDWalletConnectButtonView></SDWalletConnectButtonView>}        />
         </SDWalletProvider>
     </>
     );
