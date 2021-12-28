@@ -33,7 +33,9 @@ function App() {
                             <SDNavbar>
                                 {walletContext.connected && <WalletDisconnectButton />},
                                 <SDWalletConnectButtonView />,
-                                <SDButton onClick={() => {}}>Items</SDButton>
+                                {walletContext.connected && 
+                                    <SDButton onClick={() => {}}>Items</SDButton>
+                                },
                             </SDNavbar>
                         } 
                     />}
