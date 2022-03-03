@@ -1,0 +1,24 @@
+.SDButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 1em 0.5em;
+    border-radius: 6px;
+    border:none;
+}
+
+.SDButton--primary {
+    background-color: hsl(244, 58%, 54%);
+}
+.SDButton--primary:hover {
+    background-color: hsl(244, 58%, 45%);
+}
+
+.SDButton__text {
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.SDButton__text--primary {
+    color: white;
+}
